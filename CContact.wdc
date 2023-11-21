@@ -1,0 +1,89 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CContact
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x191b16e10009fcd5
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  internal_properties : CAAAAAgAAAAb8HaVbu2AxmhlOEsF7scMqJh1jDZ8NwiBdFjFp1kQDo601eQGzl3hi75zdjkQ9yj1prQk+mEqpYrvtU9JOyszchghMZ30MvM=
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      CContact is Class
+      	m_sName				is string		// Name of contact
+      	m_sFirstName			is string 	// First name of contact
+      	m_sDateOfBirth		is string		// Date of birth of the contact
+      	m_sComment		is string		// Comment
+      END
+      
+     type : 131072
+  procedures :
+   -
+     name : Constructor
+     procedure_id : 1809064830943558869
+     type_code : 27
+     code : |1+
+      Procedure Constructor()
+      
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1809064830943624405
+     type_code : 28
+     code : |1+
+      Procedure Destructor()
+      
+     type : 655360
+   -
+     name : Display
+     procedure_id : 1809071492438009156
+     type_code : 12
+     code : |1-
+      // Summary: Returns a string corresponding to the contact
+      // Syntax:
+      //[ <Result> = ] Display ()
+      //
+      // Parameters:
+      //	None
+      // Return value:
+      // 	string:   String corresponding to the contact
+      //// Example:
+      // Indicate an example.
+      // Info(clContact:Display())
+      Procedure Display()
+      
+      // Local variables
+      sResult 	is string
+      
+      // Structure of the result
+      sResult = [
+      	Name: %1
+      	First name: %2
+      	Date of birth: %3
+      	Comments: %4
+      ]
+      
+      // Build the result
+      sResult = StringBuild(sResult,m_sName,m_sFirstName,DateToString(m_sDateOfBirth),m_sComment)
+      
+      // Return the result
+      RESULT sResult
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : CClasse1
+resources :
+ string_res :
+  identifier : 0x191b16dc0006e743
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ

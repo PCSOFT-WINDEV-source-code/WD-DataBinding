@@ -1,0 +1,69 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CContactList
+ major_version : 28
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x1155ab2700811809
+ internal_properties : CAAAAAgAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  internal_properties : CAAAAAgAAADbH4RuJn4Ux6A25xRS5brOvHj6g7vYHPBZuNuP9+XJADj35OKJAqMDBizYR+9TMeaiR8T/a+P6lcPbkH6/2mTZJfwYSWIvvLHKHDZWvg==
+  type_code : 10
+  p_codes :
+   -
+     internal_properties : CAAAAAgAAADSGgBC+dgUKTeUXHRibNWBVpKH+cTz3N1fAw6a2YGjHc+kliDn/C9HStayKT1Zt5TKb8yY2iU3e5K4bhOEJZdWwBjB+yiNPtfCa8HOrOePMQx7HS9rR7w7KtPz80y1dSTygLmwp7k3dGbojaT/2cBKmGz5vGg8rH/f+vp05kca+DbRh2lIZgMgg50WpbR30R3tIMxPpTxBFyICIoI6/kugkBJvFSxce9DL50BLm+e9EZFDeK+mUisw1jX+hQ==
+     code : |1+
+      CContactList is Class
+      	ContactList 	is array of CContact dynamic
+      END
+      
+     type : 131072
+  procedures :
+   -
+     name : Constructor
+     procedure_id : 1249092655665780745
+     type_code : 27
+     code : |1+
+      Procedure Constructor()
+      
+     type : 589824
+   -
+     name : Destructor
+     procedure_id : 1249092655665846281
+     type_code : 28
+     code : |1-
+      Procedure Destructor()
+      
+      // Local variables
+      clContact is CContact dynamic
+      
+      // Free all the contacts
+      FOR ALL ELEMENT clContact of ContactList
+      	delete clContact
+      END
+     type : 655360
+   -
+     name : AddContact
+     procedure_id : 1249092655665911817
+     type_code : 12
+     code : |1-
+      Procedure AddContact(pclContact is CContact dynamic)
+      
+      // Add into the array
+      Add(ContactList,pclContact)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : CAAAAAgAAACVGQgYbalU7DKC3oH4ItDrjtcTHXXV/EuH8q0IbhyQlw==
+  original_name : CClasse1
+resources :
+ string_res :
+  identifier : 0x191b1df7000fa860
+  internal_properties : CAAAAAgAAACm76HWfKGWp33VjXInA4cRlqArlgTTA862QGt72W2ld5Y=
+custom_note :
+ internal_properties : CAAAAAgAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
